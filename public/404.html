@@ -1,1 +1,15 @@
-<script type="text/javascript">document.location.href = '/'</script>
+<center>
+    <h1>Ошибка 404</h1>
+    <h4>Вас перенесёт на главную страницу через <b><span id="time"></span></b></h4>
+    <h4><a href="/">Перейти на главную</a></h4>
+</center>
+<script type="text/javascript">
+    var i = 5; //время в сек.
+    function time(){
+        document.getElementById("time").innerHTML = i;//визуальный счетчик
+        i--; //уменьшение счетчика
+        if (i < 0) location.href = "/";//редирект
+    }
+    time();
+    setInterval(time, 1000);
+</script>
