@@ -3,8 +3,9 @@
 
 <head>
     <script type="text/javascript">
-    var url = window.location.href;
-    if (url.indexOf('baysultanov95.ru') != -1) document.location.href = 'https://baysultanov.com/';
+        var host = "baysultanov.com";
+        if (window.location.href.indexOf('baysultanov95.ru') != -1) document.location.href = 'https://' + host;
+        if ((host == window.location.host) && (window.location.protocol != 'https:')) window.location = window.location.toString().replace(/^http:/, "https:");
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="icon" type="image/png" href="/assets/favicon.ico">
